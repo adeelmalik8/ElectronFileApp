@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Electrons Application</title>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
@@ -9,10 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/color_1.css" id="colors-style">
 	<link rel="stylesheet" type="text/css" href="css/switcher.css">
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-        <link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css">
-
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 	<link rel="stylesheet" href="./css/css">
-        
 </head>
 <style>
     .modal {
@@ -40,9 +40,7 @@ body.loading {
 body.loading .modal {
     display: block;
 }
-  .label-important, .badge-important {
-    background-color: #b94a48;
-}  
+    
 </style>
 <body>
 	<div class="page_wrapper">
@@ -82,83 +80,83 @@ body.loading .modal {
 								</div>
 								
 								<h2 class="resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-1" style="background-color: rgb(245, 245, 245); border-color: rgb(193, 193, 193);"><span class="fc-icon"></span><i class="fc_icons fa fa-tasks"></i> <span class="tabs-text">Resume</span><i class="fa fa-angle-down arrow-tabs"></i></h2>
-                                                                <form name="filesForm" id="filesForm">
                                                                 <div class="fc-tab-2 resp-tab-content hor_1" aria-labelledby="hor_1_tab_item-1" style="border-color: rgb(193, 193, 193);">
                                                                         <h2 class="title_contanier">Add/Edit Configuration</h2>
 								            <div class="col-md-6">
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="CenterID">Center ID</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="CenterID" name="CenterID" title="Center ID" data-trim="" data-min-chars="1" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="SecretCode">Secret Code</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="SecretCode" name="SecretCode" title="Secret Code" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="APIKey">API Key</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="APIKey" name="APIKey" title="API Key" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="Bucket">Bucket Name</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="Bucket" name="Bucket" title="Bucket Name" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="OnlinesServe">Online Server</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="OnlinesServe" name="OnlinesServe" title="Online Server" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="OfflineServer">Offline Server</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="OfflineServer" name="OfflineServer" title="Offline Server" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="LogDirectory">Log Directory</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="LogDirectory" name="LogDirectory" title="Log Directory" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="MasterDirectory">Master Directory</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="MasterDirectory" name="MasterDirectory" title="Master Directory" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
-                                                                                </div>
-                                                                                <div class="control-group">
-                                                                                        <label class="control-label" for="SlaveDirectory">Slave Directory</label>
-                                                                                        <div class="controls">
-                                                                                                <input type="text" id="SlaveDirectory" name="SlaveDirectory" title="Slave Directory" data-trim="" data-min-chars="3" data-is-not="vic bob tom sam" class=" form-control required" maxlength="128">
-                                                                                        </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="CenterID">Center ID</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" name="CenterID" id="centerid" placeholder="Center ID" required>
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                  
-                                                                                            <label class="checkbox inline"><input type="checkbox" name="savelocation" value="debug" id="debug" title="What do you like?" class="required"> Debug</label>
-                                                                                            <label class="checkbox inline"><input type="checkbox" name="savelocation" value="master"  id="master" data-min-options="1" data-max-options="4"> Copy From Master</label>
-                                                                                            <label class="checkbox inline"><input type="checkbox" name="savelocation" value="usb" id="usb"> Transfer by USB</label>
-                                                                                  
-                                                                            </div>
-                                                                                
-<!--                                                                                <div class="form-group">
+                                                                                    <label for="SecretCode">Secret Code</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="SecretCode" name="SecretCode" placeholder="Secret Code" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="APIKey">API Key</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="APIKey" name="APIKey" placeholder="API Key" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="Bucket">Bucket</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="Bucket" name="Bucket" placeholder="Bucket Name" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
                                                                                     
                                                                                         <input type="radio" name="dataChoice" id="Choicedebug" value="debug"> <label for="dataChoice">Debug</label>
                                                                                         <input type="radio" name="dataChoice" id="Choicemaster" value="master"> <label for="dataChoice">Copy From Master</label>
                                                                                         <input type="radio" name="dataChoice" id="Choiceusb" value="usb"> <label for="dataChoice">Transfer by USB</label>
                                                                                     
-                                                                                </div>-->
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="OnlinesServe">Online Server</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="OnlinesServe" name="OnlinesServe" placeholder="Online Server<" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="OfflineServer">Offline Server</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="OfflineServer" name="OfflineServer" placeholder="Offline Server" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="LogDirectory">Log Directory</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="LogDirectorys" name="LogDirectory" placeholder="Log Directory" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="MasterDirectory">Master Directory</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="MasterDirectory" name="MasterDirectory" placeholder="Master Directory" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="SlaveDirectory">Slave Directory</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="SlaveDirectory" name="SlaveDirectory" placeholder="Slave Directory" required  >
+                                                                                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                                                                                    </div>
+                                                                                </div>
                                                                                 <button class="btn btn-lg btn-primary btn-block"  id="saveconfig" type="button">Submits</button>
                                                                             </div>
 								</div>
-                                                                </form>
+								
 								<h2 class="resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-2" style="background-color: rgb(245, 245, 245); border-color: rgb(193, 193, 193);"><span class="fc-icon"></span><i class="fc_icons fa fa-briefcase"></i> <span class="tabs-text">Portfolio</span><i class="fa fa-angle-down arrow-tabs"></i></h2><div class="fc-tab-3 resp-tab-content hor_1" aria-labelledby="hor_1_tab_item-2" style="border-color: rgb(193, 193, 193);">
 								
 									<h2 class="title_contanier">Master Sync</h2>
@@ -214,131 +212,13 @@ body.loading .modal {
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script> 
 	<script type="text/javascript" src="./js/jquery.cookie.js"></script>
-<!--        <script type="text/javascript" src="./js/jquery.formvalidate.js"></script>-->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-       <script type="text/javascript" src="./js/jquery.cookie.js"></script> 
-       <script type="text/javascript" src="./js/jquery.formvalidate.js"></script> 
-      <script type="text/javascript">
-        
-    
-  jQuery(document).ready(function($) {
-         
-    const electron  = require('electron');
-    var fs = require('fs');
-    const ipc  = electron.ipcRenderer;
-    console.log("Loadin View....");
-    $.support.cors = true;
-    // Generate a simple captcha
-    function randomNumber(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-  //  $('#captchaOperation').html([randomNumber(1, 100), '+', randomNumber(1, 200), '='].join(' '));
-  
-   jQuery('#saveconfig').click(function(e) {
-    var $frm = $('#filesForm');
-   // Validate on form submission
-	//	$frm.submit(function(e) {
-			e.preventDefault();
-                        
-                        $('#filesForm').formvalidate({
-    failureMessages: true,
-    successMessages: false,
-    messageFailureClass: 'label label-important',
-    messageSuccessClass: 'label label-success',
-    onSuccess: function(form) {
-      // alert('Form #2 is valid!'); 
-         //alert("The file has been succesfully ");
-     $("body").addClass("loading");
-     var radios = document.getElementsByName('dataChoice');
-     $("body").removeClass("loading")
-  //      let checkedValue = "";
-//    for (var i = 0, length = radios.length; i < length; i++)
-//    {
-//     if (radios[i].checked)
-//     {
-//      // do whatever you want with the checked radio
-//      checkedValue = radios[i].value
-//
-//      // only one radio can be logically checked, don't check the rest
-//      break;
-//     }
-//    }
-     var favorite = [];
-            $.each($("input[name='savelocation']:checked"), function(){            
-                favorite.push($(this).val());
-            });
-            
-         //   $("body").removeClass("loading");
-            var stdData = {
-                   CenterID: $('#CenterID').val(),
-                   SecretCode: $('#SecretCode').val(),
-                   APIKey: $('#APIKey').val(), 
-                   Bucket : $('#Bucket').val(),
-                   OnlinesServe : $('#OnlinesServe').val(),
-                   OfflineServer : $('#OfflineServer').val(),
-                   LogDirectory : $('#LogDirectory').val(),
-                   MasterDirectory : $('#MasterDirectory').val(),
-                   SlaveDirectory : $('#SlaveDirectory').val(),
-                   savelocation : favorite,
-                 //  DataChoice: checkedValue,
-                 }
-            var StdJson = JSON.stringify(stdData);
-          
-            fs.writeFile("config.json", StdJson, (err) => {
-                if (err) {
-                    alert("An error ocurred updating the file" + err.message);
-                      $("body").removeClass("loading");
-                    return;
-                }
-              //s alert("The file has been succesfully saved");
-                 $("body").removeClass("loading");
-                   alert("The file has been succesfully saved");
-            });
-         
-     
-        
-      
-    },
-    localization: {
-      en: {
-        success: {
-          name: 'Good, you know your name.',
-          age: 'Ahh, {1}, a wise age.',
-          birth_date: 'The year of the tiger!',
-          email: 'We promise not to stalk you.',
-          continent: function(title, value, name, input) {
-            var text = $(':input[name="' + name + '"] option[value="' + value + '"]').text();
-            return text + ', really? Me too!';
-          },
-          'colors[]': 'O, wow good choices!',
-          why_cool: 'Ya, u got it!',
-            'like[]': 'Those are my favorite frameworks too.!'
-          },
-          failure: {
-            email: function(title, value, name, input) {
-            return 'There is no way that email ' + value + ' is valid.';
-          }
-        }
-      }
-    }
-  });
-                        
-                        
-
-		});
-         
-            
-            // From the anchor element find the closest form element
-//  
-//       
-//const electron  = require('electron')
-//var fs = require('fs');
-//const ipc  = electron.ipcRenderer
-//console.log("Loadin View....");
-//$.support.cors = true;
-jQuery("#saveconfigs").click(function(){
-
+        <script type="text/javascript">
+const electron  = require('electron')
+var fs = require('fs');
+const ipc  = electron.ipcRenderer
+console.log("Loadin View....");
+$.support.cors = true;
+$("#saveconfigs").click(function(){
      $("body").addClass("loading");
     // read file 
      var qry_str = '';
@@ -352,11 +232,8 @@ jQuery("#saveconfigs").click(function(){
                     // Change how to handle the file content
                         var obj = JSON.parse(data)
                      
-                       qry_str = obj.OnlinesServe+'get_all_export_files_site?center_id='+obj.CenterID+'&secret='+obj.SecretCode+'&api_key='+obj.APIKey;
-                      // qry_str = obj.OnlinesServe+'/get_all_export_files_site?center_id='+obj.CenterID+'&secret='+obj.SecretCode+'&api_key='+obj.APIKey;
-                      // qry_str = 'http://odia.shikhya.org/get_all_export_files_site?center_id='+obj.CenterID+'&secret='+obj.SecretCode+'&api_key='+obj.APIKey;
-                    // //  qry_str = "http://odia.shikhya.org/get_all_export_files_site?center_id=46&secret=MHfE&api_key=Odap";
-                     // alert(qry_str);
+                       qry_str = obj.OnlinesServe+'/get_all_export_files_site?center_id='+obj.CenterID+'&secret='+obj.SecretCode+'&api_key='+obj.APIKey;
+                       alert(qry_str);
                 $.ajax({
 
                     // The 'type' property sets the HTTP method.
@@ -415,8 +292,7 @@ jQuery("#saveconfigs").click(function(){
                           
                     },
 
-                    error: function(xhr, textStatus, errorThrown) {
-                        alert(xhr.responseText);
+                    error: function() {
                         alert("fail");
                         $("body").removeClass("loading");
                       // Here's where you handle an error response.
@@ -438,7 +314,65 @@ jQuery("#saveconfigs").click(function(){
           });
     ///////////////================================
 });
-  });               
+ //document.getElementById('dataChoice').value= "debug";
+$("#saveconfig").click(function(){
+    //alert("The file has been succesfully ");
+     $("body").addClass("loading");
+     var radios = document.getElementsByName('dataChoice');
+        let checkedValue = "";
+    for (var i = 0, length = radios.length; i < length; i++)
+    {
+     if (radios[i].checked)
+     {
+      // do whatever you want with the checked radio
+      checkedValue = radios[i].value
+
+      // only one radio can be logically checked, don't check the rest
+      break;
+     }
+    }
+     
+     //alert(checkedValue);
+        var stdData = {
+                        CenterID: document.getElementById('centerid').value,
+                        SecretCode: document.getElementById('SecretCode').value,
+                        APIKey: document.getElementById('APIKey').value,
+                        Bucket: document.getElementById('Bucket').value,
+                        OnlinesServe: document.getElementById('OnlinesServe').value,
+                        OfflineServer: document.getElementById('OfflineServer').value,
+                        LogDirectorys: document.getElementById('LogDirectorys').value,
+                        MasterDirectory: document.getElementById('MasterDirectory').value,
+                        SlaveDirectory: document.getElementById('SlaveDirectory').value,
+                        DataChoice: checkedValue,
+                      }
+                      
+        //   //reset values    
+//    document.getElementById('centerid').value = ''
+//    document.getElementById('InputEmail').value = ''
+//    document.getElementById('APIKey').value = ''
+//    document.getElementById('Bucket').value = ''
+//    document.getElementById('OnlinesServe').value = ''
+//    document.getElementById('OfflineServer').value = ''
+//    document.getElementById('LogDirectorys').value = ''
+//    document.getElementById('MasterDirectory').value = ''
+//    document.getElementById('SlaveDirectory').value = ''
+    
+    
+        var StdJson = JSON.stringify(stdData);
+        fs.writeFile("config.json", StdJson, (err) => {
+            if (err) {
+                alert("An error ocurred updating the file" + err.message);
+                  $("body").removeClass("loading");
+                return;
+            }
+          //s alert("The file has been succesfully saved");
+             $("body").removeClass("loading");
+               alert("The file has been succesfully saved");
+        });
+   
+ 
+});
+                   
       </script>
       <!--<script type="text/javascript" src="./assets/js/rendrer.js"></script>-->
 	<script type="text/javascript" src="./js/switcher.js"></script>

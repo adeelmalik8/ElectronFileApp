@@ -101,7 +101,11 @@ app.on('ready',_=>{
                     
                     
                    var obj = JSON.parse(data)
-                   
+                   var a = obj.savelocation;
+                    obj.savelocation.forEach(function(entry) {
+                        console.log(entry);
+                        mainWindow.webContents.executeJavaScript(`document.getElementById('`+entry+`').checked =true`);
+                    });
                     dataChoiceID = "Choice"+obj.DataChoice;
                     mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="CenterID"]').value="`+obj.CenterID+`"`)
                     mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="SecretCode"]').value="`+obj.SecretCode+`"`)
@@ -109,10 +113,10 @@ app.on('ready',_=>{
                     mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="Bucket"]').value="`+obj.Bucket+`"`)
                     mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="OnlinesServe"]').value="`+obj.OnlinesServe+`"`)
                     mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="OfflineServer"]').value="`+obj.OfflineServer+`"`)
-                    mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="LogDirectorys"]').value="`+obj.LogDirectorys+`"`)
-                    mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="MasterDirectory"]').value="`+obj.MasterDirectorys+`"`)
+                    mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="LogDirectory"]').value="`+obj.LogDirectory+`"`)
+                    mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="MasterDirectory"]').value="`+obj.MasterDirectory+`"`)
                     mainWindow.webContents.executeJavaScript(`document.querySelector('input[name="SlaveDirectory"]').value="`+obj.SlaveDirectory+`"`)
-                    mainWindow.webContents.executeJavaScript(`document.getElementById('`+dataChoiceID+`').checked =true`)
+                   // mainWindow.webContents.executeJavaScript(`document.getElementById('`+dataChoiceID+`').checked =true`)
                 })
                 
             }else{
